@@ -1,0 +1,115 @@
+body{
+    background-color: red;
+}
+
+.page{
+    width: 1000px;
+    height: 500px;
+    /* background-color: silver; */
+    margin: auto;
+    margin-top: 20px;
+    background: linear-gradient(to right, rgb(255, 17, 0) , rgb(129, 6, 167));
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+:root {
+    --background: #45526C;
+    --green: #5AA897;
+    --red: #dc3545;
+    --gray: #f8f8f8;
+    --white: #ffffff;
+    --dark: #35353f;
+    --orange: #FF6B6B;
+}
+
+/* header */
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: var(--white);
+}
+
+header .navbar .navbar-title p {
+    font-weight: bolder;
+}
+
+header .navbar .navbar-title span {
+    color: var(--green);
+}
+
+header .navbar .navbar-list ul {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+  
+}
+
+header .navbar .navbar-list ul li {
+    margin-right: 2rem;
+}
+
+header .navbar .navbar-list ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+header .navbar .navbar-list ul li a:hover {
+    color: var(--red);
+    transition: all .5s ease;
+}
+
+/* center */
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    color: wheat;
+ }
+ 
+ .center p{
+     font-size: 13px;
+     width: 700px;
+ }
+
+ .font{
+     margin-top: 20px;
+     font-size: 70px;
+     
+ }
+
+ .subtitle{
+     color: wheat;
+     padding-left: 10px;
+     display: flex;
+     justify-content: space-around;
+
+ }
+ 
+
+ .top{
+     background-color: wheat;
+     width: 1000px;
+     height: 70px;
+     margin: auto;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+
+ .matn{
+     color: rgb(211, 35, 35);
+     text-align: center;
+     margin-top: 0;
+     padding-top: 22px;
+ }
+
+ .spn{
+     color: black;
+     border-bottom: solid red;
+ }
+
+ .icon{
+    font-size: 30px;
+ }

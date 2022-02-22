@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+
+    <!-- ! bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- ! bootstrap -->
+    <!-- ! owlCarousel  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <!-- ! owlCarousel  -->
+    <link rel="stylesheet" href="./assets/styles/responsive.css">
+
+</head>
+
+<body>
+
+
+    <div class="parent-form">
+        <form class="form" id="loginForm">
+            <h1>ثبت نام</h1>
+            <div class="alert alert-danger" role="alert">
+                اطلاعات خود را کامل وارد کنید
+            </div>
+            <div class="mb-3">
+                <label for="fullname" class="form-group form-label">نام کاربری</label>
+                <input type="text" class="form-control" id="fullname" placeholder="نام و نام خانوادگی"
+                    name="fullname">
+            </div>
+            <div class="mb-3">
+                <label for="mobile" class="form-group form-label">شماره همراه</label>
+                <input type="text" class="form-control" id="mobile" placeholder="*******0933"
+                    name="mobile">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-group form-label">پست الکترونیک</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="test@gmail.com"
+                    name="email">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-group form-label">کلمه عبور</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123456"
+                    name="password">
+            </div>
+            <button type="" class="btn btn-danger w-100">ثبت نام</button>
+            <a href="./login.html">من ثبت نام کردم !!!</a>
+        </form>
+    </div>
+
+
+    <!-- ! jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- ! jquery -->
+    <!-- ! bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!-- ! bootstrap -->
+    <!-- ! font awesome -->
+    <script src="./assets/js/all.min.js"></script>
+    <!-- ! font awesome -->
+    <!-- ! owl carousel  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- ! owl carousel  -->
+    <script>
+        $('#mostPopular').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+        $('#writer').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script>
+        jQuery.extend(jQuery.validator.messages, {
+            required: "وارد کردن این فیلد ضروری است",
+            email: "پست الکترونیک درست وارد نشده است",
+            number: "لطفا بصورت عدد وارد کنید",
+            maxlength: jQuery.validator.format("کلمه عبور خود را بیشتر از 30 کاراکتر انتخاب نکنید"),
+            minlength: jQuery.validator.format(".کلمه عبور خود را کمتر از 8 کاراکتر انتخاب نکنید"),
+        });
+
+        $(document).ready(function () {
+            $.validator.setDefaults({
+                highlight: function (element) {
+                    $(element)
+                        .closest(".form-group")
+                        .addClass("has-error")
+                }
+            });
+            $('#loginForm').validate(
+                {
+                    rules: {
+                        fullname: {
+                            required: true,
+                        },
+                        mobile: {
+                            required: true,
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        password: {
+                            required: true,
+                            minlength: 8
+                        }
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>

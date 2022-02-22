@@ -1,0 +1,24 @@
+.nav{
+    display: flex;
+   justify-content: space-between;
+}
+
+.center{
+    direction: rtl;
+    text-align: center
+}
+
+.center p{
+   width: 50%;
+   margin: auto;
+   font-size: 20px;
+} 
+
+.center h4{
+    color: rgb(161, 153, 153);
+}
+
+.comment{
+    direction: rtl;
+   
+}
